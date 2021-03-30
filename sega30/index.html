@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="headm">
+    <title>Administración Escolar</title>
+    <base href="/" />
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Sistema web para la Administración Escolar" />
+    <meta name="keywords" content="Angular 8, Sitema Escolar" />
+    <meta name="author" content="Withinpixels" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="assets/icons/meteocons/style.css" rel="stylesheet" />
+    <link href="assets/icons/material-icons/outline/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.59/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.59/vfs_fonts.js"></script>
+
+    <!-- FUSE Splash Screen CSS -->
+    <style type="text/css">
+      #design-splash-screen {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2d323d;
+        z-index: 99999;
+        pointer-events: none;
+      }
+
+      #design-splash-screen .center {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #design-splash-screen .logo {
+        width: 400px;
+        /* width: 128px; */
+        /* margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      #design-splash-screen .logo img {
+        filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.2));
+      }
+
+      #design-splash-screen .spinner-wrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+        height: 100px;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner {
+        position: absolute;
+        overflow: hidden;
+        left: 50%;
+        margin-left: -50px;
+        animation: outer-rotate 2.91667s linear infinite;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .gap {
+        position: absolute;
+        left: 49px;
+        right: 49px;
+        top: 0;
+        bottom: 0;
+        border-top: 10px solid;
+        box-sizing: border-box;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .left,
+      #design-splash-screen .spinner-wrapper .spinner .inner .right {
+        position: absolute;
+        top: 0;
+        height: 100px;
+        width: 50px;
+        overflow: hidden;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .left .half-circle,
+      #design-splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border: 10px solid #4285f4;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .left {
+        left: 0;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .left .half-circle {
+        left: 0;
+        border-right-color: transparent;
+        animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+        -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .right {
+        right: 0;
+      }
+
+      #design-splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+        right: 0;
+        border-left-color: transparent;
+        animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+        -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+      }
+
+      @keyframes outer-rotate {
+        0% {
+          transform: rotate(0deg) scale(0.5);
+        }
+        100% {
+          transform: rotate(360deg) scale(0.5);
+        }
+      }
+
+      @keyframes left-wobble {
+        0%,
+        100% {
+          transform: rotate(130deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+      }
+
+      @keyframes right-wobble {
+        0%,
+        100% {
+          transform: rotate(-130deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+      }
+
+      @keyframes sporadic-rotate {
+        12.5% {
+          transform: rotate(135deg);
+        }
+        25% {
+          transform: rotate(270deg);
+        }
+        37.5% {
+          transform: rotate(405deg);
+        }
+        50% {
+          transform: rotate(540deg);
+        }
+        62.5% {
+          transform: rotate(675deg);
+        }
+        75% {
+          transform: rotate(810deg);
+        }
+        87.5% {
+          transform: rotate(945deg);
+        }
+        100% {
+          transform: rotate(1080deg);
+        }
+      }
+    </style>
+    <!-- / FUSE Splash Screen CSS -->
+  <link rel="stylesheet" href="styles.34e4d2e0ca80a1c0b725.css"></head>
+
+  <body>
+    <!-- FUSE Splash Screen -->
+    <design-splash-screen id="design-splash-screen">
+      <div class="center">
+        <div class="logo">
+          <!-- <img width="400" src="assets/logo/logo_fondo1.png" /> -->
+        </div>
+
+        <!-- Material Design Spinner -->
+        <div class="spinner-wrapper">
+          <div class="spinner">
+            <div class="inner">
+              <div class="gap"></div>
+              <div class="left">
+                <div class="half-circle"></div>
+              </div>
+              <div class="right">
+                <div class="half-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Material Design Spinner -->
+      </div>
+    </design-splash-screen>
+    <!-- / FUSE Splash Screen -->
+
+    <app></app>
+  <script src="runtime-es2015.f08ffb3997a3223bbe12.js" type="module"></script><script src="runtime-es5.f08ffb3997a3223bbe12.js" nomodule defer></script><script src="polyfills-es5.4a64fc4c411fb023a05a.js" nomodule defer></script><script src="polyfills-es2015.60e3723412a3dfa9749e.js" type="module"></script><script src="main-es2015.2494f3497c3e1d7e9831.js" type="module"></script><script src="main-es5.2494f3497c3e1d7e9831.js" nomodule defer></script></body>
+</html>
